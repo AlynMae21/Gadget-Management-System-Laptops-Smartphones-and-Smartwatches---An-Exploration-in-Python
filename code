@@ -1,0 +1,63 @@
+class Gadget:
+    def __init__(self, name, brand, price):
+        self.name = name         # Attribute encapsulation: name of the gadget
+        self.brand = brand       # Attribute encapsulation: brand of the gadget
+        self.price = price       # Attribute encapsulation: price of the gadget
+
+    def display_info(self):
+        # Method encapsulation: Displaying the gadget's information
+        print("Name:", self.name)
+        print("Brand:", self.brand)
+        print("Price:", self.price)
+
+# Inheritance: The Smartphone class inherits from the Gadget class
+class Smartphone(Gadget):
+    def __init__(self, brand, price, model):
+        # Using inheritance to call the base class initializer
+        super().__init__("Smartphone", brand, price)
+        self.model = model       # Additional attribute specific to Smartphone
+
+    # Polymorphism: Overriding the base class method to include model information
+    def display_info(self):
+        super().display_info()
+        print("Model:", self.model)
+
+# Inheritance: The Laptop class inherits from the Gadget class
+class Laptop(Gadget):
+    def __init__(self, brand, price, screen_size):
+        # Using inheritance to call the base class initializer
+        super().__init__("Laptop", brand, price)
+        self.screen_size = screen_size   # Additional attribute specific to Laptop
+
+    # Polymorphism: Overriding the base class method to include screen size information
+    def display_info(self):
+        super().display_info()
+        print("Screen Size:", self.screen_size, "inches")
+
+# Inheritance: The Smartwatch class inherits from the Gadget class
+class Smartwatch(Gadget):
+    def __init__(self, brand, price, water_resistant):
+        # Using inheritance to call the base class initializer
+        super().__init__("Smartwatch", brand, price)
+        self.water_resistant = water_resistant   # Additional attribute specific to Smartwatch
+
+    # Polymorphism: Overriding the base class method to include water resistance information
+    def display_info(self):
+        super().display_info()
+        print("Water Resistant:", "Yes" if self.water_resistant else "No")
+
+# Abstraction: The user interacts with the instances of the subclasses and calls display_info()
+# without needing to know the details of how it is implemented.
+# Creating instances of the subclasses
+smartphone = Smartphone("Samsung", 799, "Galaxy S20")
+laptop = Laptop("Apple", 1299, 13.3)
+smartwatch = Smartwatch("Fitbit", 199, True)
+
+# Displaying information about the gadgets using abstraction
+print("Smartphone:")
+smartphone.display_info()
+print("\nLaptop:")
+laptop.display_info()
+print("\nSmartwatch:")
+smartwatch.display_info()
+
