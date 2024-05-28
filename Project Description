@@ -1,0 +1,6 @@
+Project Description
+This Python script exemplifies fundamental object-oriented programming concepts: encapsulation, inheritance, polymorphism, and abstraction. Encapsulation is practiced through the `Gadget` class, which encapsulates attributes like `name`, `brand`, and `price`, along with a method `display_info()` that prints these attributes. 
+Inheritance is prominently featured with subclasses `Smartphone`, `Laptop`, and `Smartwatch`, each inheriting from `Gadget`. The `Smartphone` class introduces an `model` attribute, `Laptop` adds `screen_size`, and `Smartwatch` includes `water_resistant`, while all override `display_info()` to incorporate these specific details. 
+Polymorphism is showcased as each subclass provides its own implementation of `display_info()`, tailored to the particular gadget type.
+Abstraction is effectively demonstrated as users interact with instances of these subclasses, utilizing the `display_info()` method to access gadget details without needing to understand the internal workings of each class.
+Example instances include a `Smartphone` by Samsung, a 13.3-inch `Laptop` by Apple, and a water-resistant `Smartwatch` by Fitbit, with each instance displaying relevant information through method calls, exemplifying abstraction in action.
